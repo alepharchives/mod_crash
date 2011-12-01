@@ -9,6 +9,7 @@
 -spec do(#mod{}) -> {'proceed', _} | {'break', _} | 'done'.
 
 do(Info) ->
+    lager:debug("We right here!"),
     lager:debug("What's that ~p?", [now() - now()]),
     {'proceed', [Info#mod.data]}.
 
